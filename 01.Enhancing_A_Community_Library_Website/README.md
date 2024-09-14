@@ -35,3 +35,5 @@ Then I staged, committed and pushed to remote repo
 Next, I raised a pull request and merged to the main branch.
 
 I repeated the same process by creating another branch (update-events) and added random content to the event.html file, then I staged, committed, and pushed to the remote repo.
+
+Thank you
