@@ -23,6 +23,7 @@ Next, I staged, commited and pushed the update to my remote repo using `git add 
 ![](./img/img%203.png)
 
 Next step was to create a new branch with command `git branch <branch_name>` to create a new branch, then `git checkout <branch_name>` to switch to the branch you created.
+
 ![](./img/img%204.png)
 
 I moved on to creating a file and adding random content in it, using `echo "#Book Reviews" > book_reviews.html`
