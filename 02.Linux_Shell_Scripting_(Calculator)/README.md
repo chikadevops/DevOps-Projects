@@ -27,7 +27,7 @@
         read -p "Enter a starting number (between 1 and 10): " startnum
         read -p "Enter the ending number (between 1 and 10): " endnum
 
-#### #Here, the above syntax is simply saying that if the user's input saved in the `$str`string is 'p', then it should ask for a starting number and save the input in a "startnum" string. Then it should ask for the ending number and save the user input in an "endnum" string. We used and if-statement.
+#### #Here, the above syntax is simply saying that if the user's input saved in the `$str`string is 'p', then it should ask for a starting number and save the input in a "`startnum`" string. Then it should ask for the ending number and save the user input in an "endnum" string. We used and if-statement.
 
         # Validate that startnum is less than or equal to endnum
         if [ "$startnum" -gt "$endnum" ]; then
