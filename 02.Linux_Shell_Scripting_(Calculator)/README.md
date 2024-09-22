@@ -27,7 +27,7 @@
         read -p "Enter a starting number (between 1 and 10): " startnum
         read -p "Enter the ending number (between 1 and 10): " endnum
 
-#### #Here, the above syntax is simply saying that if the user's input saved in the `$str`string is 'p', then it should ask for a starting number and save the input in a "`startnum`" string. Then it should ask for the ending number and save the user input in an "`endnum`" string. We used and if-statement.
+#### #The above syntax is simply saying that if the user's input saved in the `$str`string is 'p', then it should ask for a starting number and save the input in a "`startnum`" string. Then it should ask for the ending number and save the user input in an "`endnum`" string. We used and if-statement.
 
         # Validate that startnum is less than or equal to endnum
         if [ "$startnum" -gt "$endnum" ]; then
@@ -38,7 +38,7 @@
             continue  # Loop again if invalid range
         fi
 
-#### #Here, the above syntax is saying that if the starting number is greater than the ending number, it should give an error output and ask that the user tries again. We used a "Break and Continue" statement. `continue` makes the output loop again if the user inputs an invalid range. 
+#### #The above syntax is saying that if the starting number is greater than the ending number, it should give an error output and ask that the user tries again. We used a "Break and Continue" statement. `continue` makes the output loop again if the user inputs an invalid range. 
 
         # Print partial multiplication table
         echo "" # Inserts a blank line
