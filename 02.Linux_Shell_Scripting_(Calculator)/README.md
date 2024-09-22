@@ -5,6 +5,7 @@
 ### #Prompt user for a number
 
 `read -p "Enter a number for the multiplication table: " num`
+![](./img/img%201.png)
 
 #### #The above command promts the user to enter a number for the multiplication table and saves the input in the "num" string
 
@@ -14,6 +15,7 @@
 
 ### #Ask if user wants full or partial table
 `read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " str`
+![](./img/img%202.png)
 
 #### #The above code asks the user to choose if they want a full table or a partial table and saves it in the "str" string.
 
@@ -27,6 +29,7 @@
         read -p "Enter a starting number (between 1 and 10): " startnum
         read -p "Enter the ending number (between 1 and 10): " endnum
 
+![](./img/img%203.png)
 #### #The above syntax is simply saying that if the user's input saved in the `$str`string is 'p', then it should ask for a starting number and save the input in a "`startnum`" string. Then it should ask for the ending number and save the user input in an "`endnum`" string. We used and if-statement.
 
         # Validate that startnum is less than or equal to endnum
@@ -37,6 +40,7 @@
             echo "" # Inserts another blank line
             continue  # Loop again if invalid range
         fi
+![](./img/img%205.png)
 
 #### #The above syntax is saying that if the starting number is greater than the ending number, it should give an error output and ask that the user tries again. We used a "Break and Continue" statement. `continue` makes the output loop again if the user inputs an invalid range. 
 
@@ -47,10 +51,13 @@
             echo "$num * $i = $(( num * i ))"
         done
         break  # Exit the loop after the partial table is printed
+![](./img/img%204.png)
+
 
 #### #The above syntax uses a for loop in a C-style syntax where we control the initialization, the condition and the increment.
 #### `(( i=$startnum; i<=$endnum; i++ ))`tells the loop that the first value should be the number in the `$startnum` string, and should continue till it gets to the value in the `$endnum` string, increasing it by 1 value (`i++`).
 #### `echo "$num * $i = $(( num * i ))"` syntax mean it'll print the value in the '`$num`' string and multiply it each time with each of the output values produced by the previous for loop.
+#### In the picture our `$num` is 3, `startnum` is 2 and `endnum` is 6, making the syntax print 3 * 2, and continued the loop, each time adding 1 till we got to our `endnum`, 6.
 #### `break` exits the loop after the partial table has been printed.
 
 
@@ -62,8 +69,11 @@
             echo "$num * $i = $(( num * i ))"
         done
         break  # Exit the loop after the full table is printed
+![](./img/img%206.png)
 
-#### The above syntax is another if statement connoted by `elif`, stating that if the user input for the table option is 'f' (full table), it'll first print "Your full multiplication table for $num is:". The `for` loop iterates over a range of numbers (in this case, 1-10), multipling the value in the `$num` string by each number beging from 1 to 10.
+
+#### The above syntax is another condition in the `if` statement connoted by `elif`. It allows you to test multiple conditions sequentially. When an `if` condition evaluates to false, Bash checks the `elif` condition. If the `elif` condition is true, it will execute the code block associated with that `elif`. 
+#### The above `elif` condition states that if the user input for the table option is 'f' (full table), it'll first print "Your full multiplication table for $num is:". The `for` loop iterates over a range of numbers (in this case, 1-10), multipling the value in the `$num` string by each number beging from 1 to 10.
 #### `break` exits the loop after the full table has been printed.
 
     # Invalid input option
@@ -73,6 +83,7 @@
         read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " str
     fi
 done
+![](./img/img%207.png)
 
 #### #The above syntax prints "Your input is invalid. Enter 'f' for full or 'p' for partial." if the user enters any value that is not either 'f' or 'p', then asks the user to input another value. The `while` loop repeats the loop as long as the specified condition is not met. To stop the loop you must enter a valid value.
 #### `done`  serves as the terminating keyword that marks the end of the loop's body.
