@@ -88,4 +88,7 @@ done
 #### #The above syntax prints "Your input is invalid. Enter 'f' for full or 'p' for partial." if the user enters any value that is not either 'f' or 'p', then asks the user to input another value. The `while` loop repeats the loop as long as the specified condition is not met. To stop the loop you must enter a valid value.
 #### `done`  serves as the terminating keyword that marks the end of the loop's body.
 
+
+I'll attach a copy of the full script in a file titled "Calculator" inside the folder.
+
 #Thank you
