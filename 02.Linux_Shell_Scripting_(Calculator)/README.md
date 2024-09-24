@@ -11,9 +11,9 @@ The above command promts the user to enter a number for the multiplication table
 
 `echo ""` # Inserts blank line
 
-#### NOTE: Anywhere you see `echo ""`, just understand that I'm trying to give a blank line to ensure my work is organized. Another way to do achieve that is to use  `echo -e` within `\n`. Example ` echo -e "\n<text>.\n"`. 
+**NOTE: Anywhere you see `echo ""`, just understand that I'm trying to give a blank line to ensure my work is organized. Another way to do achieve that is to use  `echo -e` within `\n`. Example ` echo -e "\n<text>.\n"`.** 
 
-### #Ask if user wants full or partial table
+**#Ask if user wants full or partial table**
 `read -p "Do you want a full table or a partial table? (Enter 'f' for full, 'p' for partial): " str`
 ![](./img/img%202.png)
 
