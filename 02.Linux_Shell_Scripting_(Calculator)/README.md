@@ -2,7 +2,7 @@
 
 `#!/bin/bash` # Every bash script begins with a "shebang (#!)" followed by /bin/bash which is the path to bash in the root file.
 
-### #Prompt user for a number
+**#Prompt user for a number**
 
 `read -p "Enter a number for the multiplication table: " num`
 ![](./img/img%201.png)
