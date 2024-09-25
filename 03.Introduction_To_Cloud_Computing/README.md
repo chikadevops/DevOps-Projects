@@ -51,6 +51,7 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
 ![](./img/img%209.png)
+
 The first updates the linux server and then installs httpd (Apache), starts the web server, and ensures it automatically starts on sever boot.
 
 Next thing to do was to configure httpd to point to the directory on the linx server here the website code files are stored. Usually in ***/var/www/html***. So I had to delete the existing directory and all the files in it, and copied my MarketPeak Ecommerce website files in it, using the commands below.
