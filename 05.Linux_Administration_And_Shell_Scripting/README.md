@@ -213,8 +213,8 @@ for user in "${users[@]};
 do
 # check if user exists
 aws iam get-user --user-name "$user" >/dev/null 2>&1
-if [ $? -eq 0 ]; then
-echo "User 4user already exist. Skipping creation"
+if [ $? -eq 1 ]; then
+echo "User $user already exist. Skipping creation"
 else
         echo "Creating IAM user: $user"
         aws iam create-user --user-name "$user"
