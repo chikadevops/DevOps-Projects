@@ -19,7 +19,9 @@ I defined a variable that is an array. An array named ***users*** is declared, c
 for user in "${users[@]}; 
 do
 echo "Creating IAM user: $user"
-
+# check if user exists
+aws iam get-user --user-name "$user" >/dev/null 2>&1
+if [ $? -eq 0 ]; then
 # create IAM users using AWS CLI 
         aws iam create-user --user-name "$user"
         if [ $? -eq 0 ]; then
@@ -37,6 +39,8 @@ This line initiates a loop that iterates over each element in the users array. F
 The syntax ${user[@]} in Bash refers to all elements in the array "users".
 
 [@]: This is an index or slice syntax specific to arrays in Bash. It signifies that we want to access all elements of the array.
+
+**"$user" >/dev/null 2>&1**: This part redirects both standard output (stdout) and standard error (stderr) to /dev/null, a special device file that discards all output. This effectively suppresses any output from the command -v command.
 
 ```
 # create IAM users using AWS CLI 
@@ -207,6 +211,11 @@ check_aws_profile() \{
 
 for user in "${users[@]};
 do
+# check if user exists
+aws iam get-user --user-name "$user" >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+echo "User 4user already exist. Skipping creation"
+else
         echo "Creating IAM user: $user"
         aws iam create-user --user-name "$user"
         if [ $? -eq 0 ]; then
@@ -214,6 +223,7 @@ do
         else
                 echo "Failed to create user: $user"
         fi
+fi
 done
 
 echo "User creation process complete."
