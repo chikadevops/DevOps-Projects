@@ -131,7 +131,7 @@ Then we confirm success with the echo commmand.
 ```
 # Iterate through the array of usernames
 for user in "${users[@]}"; do
-        echo "Adding user '$USER' to group '$group_name'..."
+        echo "Adding user '$user' to group '$group_name'..."
 
         # Add the user to the group
         ADD_USER_OUTPUT=$(aws iam add-user-to-group --group-name "$group_name" --user-name "$user" 2>&1)
@@ -148,7 +148,7 @@ Let's break this down
 
 ```
 for user in "${users[@]}"; do
-        echo "Adding user '$USER' to group '$group_name'..."
+        echo "Adding user '$user' to group '$group_name'..."
 ```
 This line loops through the array "users" and performs actions for each user.
 
