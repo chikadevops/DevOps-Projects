@@ -246,7 +246,7 @@ echo "Policy '$POLICY_ARN' successfully attached to the group '$group_name'."
 
 # Iterate through the array of usernames
 for user in "${users[@]}"; do
-        echo "Adding user '$USER' to group '$group_name'..."
+        echo "Adding user '$user' to group '$group_name'..."
 
         # Add the user to the group
         ADD_USER_OUTPUT=$(aws iam add-user-to-group --group-name "$group_name" --user-name "$user" 2>&1)
