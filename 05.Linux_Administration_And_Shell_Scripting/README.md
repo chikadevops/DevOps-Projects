@@ -118,7 +118,7 @@ ATTACH_POLICY=$(aws iam attach-group-policy --group-name "$group_name" --policy-
  echo "Policy '$POLICY_ARN' successfully attached to the group '$group_name'."
 ```
 
-`POLICY_ARN="arn:aws:iam::awspolicy/AdministratorAccess"`
+`POLICY_ARN="arn:aws:iam::aws:policy/AdministratorAccess"`
 
 This line indicates the Amazon Resource Name (ARN) of the AWS-managed policy (AdministratorAccess in this case).
 
@@ -214,7 +214,7 @@ do
 # check if user exists
 aws iam get-user --user-name "$user" >/dev/null 2>&1
 if [ $? -eq 0 ]; then
-echo "User 4user already exist. Skipping creation"
+echo "User $user already exist. Skipping creation"
 else
         echo "Creating IAM user: $user"
         aws iam create-user --user-name "$user"
